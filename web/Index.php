@@ -31,8 +31,7 @@ setcookie("PASS", $PASS);
 
 <?php
 #para ver el login
-if(empty($fijo)){
-  echo "<form action=\"#\" method=\"post\">";
+  echo "<form action=\"query/VerificacionLogIn\" method=\"post\">";
  
   echo "<div class=\"bg-white p-5 rounded-5 text-secondary shadow\" style= \"width: 25rem\"; >" ;
 
@@ -64,9 +63,7 @@ if(empty($fijo)){
   echo "</div>";  
 
   echo "</form>";
-}
-if($fijo==1){
-  echo "<META HTTP-EQUIV=\"REFRESH\" CONTENT=\"1;URL=query/VerificacionLogIn.php\">";
-}
+
+
 ?>
 </body>

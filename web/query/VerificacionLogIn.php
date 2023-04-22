@@ -1,14 +1,15 @@
 <?php
 
 //DATOS EXTRAS
-include("../include/conf.phpinc");
 include("../include/func.phpinc");
 include("../include/dbopen.php");
 
+
+//variables usadas antes
+$user=$_POST['USER'];
+$pass=$_POST['PASS'];
 session_start();
 
-//$usuario=$_POST['USER'];
-//$contrasena=$_POST['PASS'];
 $contador=0;
 
 
@@ -24,29 +25,15 @@ foreach($res as $fila){
 $_SESSION["id"]=$id;
 $_SESSION["funcionario"]=$fun;
 $_SESSION["su"]=$su;
-//usuario si tipo es admin
-	//admin accede a todo el control
-if ($su=='admin'){
+
+//if
+if($su=='admin'){
 	header("Location: ../cafeteria.php");
 }
-//usuario tipo cafeteria
-else if($su=='cafeteria'){
-	header("Location: ../cafeteria.php");
-}
-else if($contador==1){
-	header("Location: MenuUsuario.php");
-}
-//En caso de no coincidir, volver a loguear
-else {
-	unset($_SESSION["id"]);
-	unset($_SESSION["funcionario"]);
-	unset($_SESSION["su"]);
 
-	echo "<script language=\"JavaScript\">
-
-	alert(\"El usuario y contrasena no coinciden\");
-	window.location= '../Index.php';
-	</script>";
+else{
+echo $_SESSION['funcionario'];
+echo $_SESSION['su'];
 }
-include("dbclose.php");
+
 ?>

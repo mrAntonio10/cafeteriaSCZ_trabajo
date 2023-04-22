@@ -1,6 +1,9 @@
 <?php
 
-include_once("conf.phpinc");
+//tomar en cuenta para acceder a la base de datos :D
+$db_user="root";
+$db_pass="4708";
+$db_name="cafeteria_scis";
     $dblink = new mysqli('localhost',$db_user, $db_pass, $db_name,3307);
 
      if ($dblink->connect_error) {

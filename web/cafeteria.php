@@ -20,13 +20,11 @@ $_SESSION["su"]=$su;
 	$user = $_SESSION['funcionario'];
 	$tipo = $_SESSION['su'];
 
+//variables del FORMS
+//0 --> cerrar sesion
 //Cafeteria debe mostrar listado de estudiantes
 
 ?>
-
-
-
-
 
 <div class="container">
   <div class="row">
@@ -41,8 +39,9 @@ $_SESSION["su"]=$su;
     </div>
     <div class="col" align="center" style="margin-top: 28px;">
       <!--   Botones de interaccion cafeteria   -->
-     <form>
-      <input type="button" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;">
+     <form action="#" method="get">
+      <input type="hidden" name="hid" value="0">
+      <input type="submit" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;">
       <BR>
       <input type="button" name="Añadir_Padre" value="Añadir Padre" style="margin-top: 10px; background-color: #BBBBBB; border-radius: 12px;"> 
       <input type="button" name="Añadir_Docente" value="Añadir Docente" style="margin-top: 10px; background-color: #BBBBBB; border-radius: 12px;">
