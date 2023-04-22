@@ -1,0 +1,47 @@
+insert into admin (Nombre,Apellido,Usuario,contrasena,Tipo,correo) values ('Hector','Ichaso','hector','capitan','admin','hectorichasobarrientos@gmail.com');
+
+insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Hector','Ichaso','hectorichasobarrientos@gmail.com','78029384',30,'hector','capitan',1,'padre');
+
+insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Hamed','Pinto','marcorocadota@gmail.com','78645654',0,'hamed','123',0,'padre');
+
+insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Yuksel','Nunez','hectorichasobarrientos@gmail.com','75049304',700,'yuksel','123',1,'padre');
+
+insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Alejandra','Ramirez','marcorocadota@gmail.com','76545376',500,'alejandra','123',0,'maestro');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Marco','Roca','5A',True,'Secundaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Martin','Hachiya','3A',True,'Primaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Carlos','Orellana','4A',True,'Secundaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Andrea','Cardoso','1A',False,'Primaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Jose','Romero','5A',True,'Secundaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Natalia','Melgar','6A',True,'Secundaria');
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Fabiana','Camacho','2A',True,'Primaria');
+
+----- + estudiantesPrimaria------
+
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Juan','Cabrera','5A',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Alejandra','Acha','1B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Pedro','Zarco','4A',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Ana','Tardio','1C',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Emilio','Guidi','3B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('David','Melendres','5B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Jorge','Itoh','6B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Jose','Cuellar','6B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Maria','Vega','1B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Mayte','Vargas','2B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Valeria','Roca','1B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Camilo','Pocota','5B',True,'Primaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Jose Maria','Pacello','3B',True,'Primaria');
+
+------- + estudiantesSecundaria-------
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Diana','Sandoval','1A',True,'Secundaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Diego','Vasquez','1A',True,'Secundaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Sebastian','Velez','1A',True,'Secundaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Mariano','Yankee','2A',True,'Secundaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Adolfo','Perez','1A',True,'Secundaria');
+insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Willam','Velasco','1A',True,'Secundaria');

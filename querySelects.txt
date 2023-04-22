@@ -1,0 +1,9 @@
+select id_estudiante, Nombre, Apellido, Curso, Grado from ESTUDIANTE;
+
+select id_padre from LISTA_FAMILIA where id_estudiante = id_estudiante;
+
+select Nombre, Apellido, Saldo from PADRE where id_padre = id_padre;	
+
+
+
+SELECT e.Nombre, e.Apellido, p.Nombre, p.Apellido, e.Curso, e.Grado, p.Saldo FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;

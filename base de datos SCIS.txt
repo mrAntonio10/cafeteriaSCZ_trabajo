@@ -1,0 +1,84 @@
+create table if not exists PADRE(
+id_padre double not null auto_increment,
+Nombre varchar(80),
+Apellido varchar(80),
+correo varchar(100),
+Telefono varchar(80),
+Saldo float,
+Usuario varchar(80),
+contrasena varchar(15),
+Estado boolean,
+Tipo varchar(50),
+primary key (id_padre)
+);
+
+create table if not exists ESTUDIANTE(
+id_estudiante double not null auto_increment,
+Nombre varchar(80),
+Apellido varchar(80),
+Curso varchar(5),
+Estado boolean,
+Grado varchar(15),
+primary key (id_estudiante)
+);
+
+create table if not exists ADMIN(
+id_admin double not null auto_increment,
+Nombre varchar(80),
+Apellido varchar(80),
+Usuario varchar(80),
+contrasena varchar(15),
+Tipo varchar(50),
+correo varchar(100),
+primary key (id_admin)
+);
+
+create table if not exists LISTA_FAMILIA(
+id_padre double,
+id_estudiante double,
+foreign key (id_padre) REFERENCES PADRE(id_padre),
+foreign key (id_estudiante) REFERENCES ESTUDIANTE(id_estudiante)
+);
+
+create table if not exists PRODUCTO(
+id_producto double not null auto_increment,
+Nombre varchar(80),
+Precio float,
+cantidad float,
+primary key (id_producto)
+);
+
+create table if not exists LISTA_PRODUCTOS(
+id_lista_productos double not null auto_increment,
+id_producto double,
+cantidad float,
+foreign key(id_producto) REFERENCES PRODUCTO(id_producto),
+primary key (id_lista_productos)
+);
+
+create table if not exists TRANSACCION(
+id_transaccion double not null auto_increment,
+id_estudiante double,
+id_administrador double,
+id_lista_productos double,
+monto float,
+fecha Datetime,
+foreign key (id_estudiante) REFERENCES ESTUDIANTE(id_estudiante),
+foreign key (id_administrador) REFERENCES ADMIN(id_admin),
+foreign key (id_lista_productos) REFERENCES LISTA_PRODUCTOS(id_lista_productos),
+primary key (id_transaccion)
+);
+
+create table if not exists PAGO(
+id_pago double not null auto_increment,
+id_padre double,
+id_admin double,
+monto float,
+tipo_pago varchar(50),
+fecha datetime,
+foreign key(id_padre) REFERENCES PADRE(id_padre),
+foreign key(id_admin) REFERENCES ADMIN(id_admin),
+primary key (id_pago)
+);
+
+
