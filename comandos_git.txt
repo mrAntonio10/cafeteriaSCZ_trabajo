@@ -1,6 +1,7 @@
 git status
-git add .
+git add ./
 git status
 git commit -m "push"
+git pull
 git push
 .
