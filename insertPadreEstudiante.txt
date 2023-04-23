@@ -45,3 +45,31 @@ insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Sebastian',
 insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Mariano','Yankee','2A',True,'Secundaria');
 insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Adolfo','Perez','1A',True,'Secundaria');
 insert into estudiante (Nombre,Apellido,Curso,Estado,Grado) values ('Willam','Velasco','1A',True,'Secundaria');
+
+------- + relacionPadreEstudiante-------
+insert into lista_familia (id_padre,id_estudiante) values (1,1);
+insert into lista_familia (id_padre,id_estudiante) values (1,2);
+insert into lista_familia (id_padre,id_estudiante) values (1,3);
+insert into lista_familia (id_padre,id_estudiante) values (1,4);
+insert into lista_familia (id_padre,id_estudiante) values (1,5);
+insert into lista_familia (id_padre,id_estudiante) values (1,6);
+insert into lista_familia (id_padre,id_estudiante) values (1,7);
+insert into lista_familia (id_padre,id_estudiante) values (2,8);
+insert into lista_familia (id_padre,id_estudiante) values (2,9);
+insert into lista_familia (id_padre,id_estudiante) values (2,10);
+insert into lista_familia (id_padre,id_estudiante) values (2,11);
+insert into lista_familia (id_padre,id_estudiante) values (2,12);
+insert into lista_familia (id_padre,id_estudiante) values (2,13);
+insert into lista_familia (id_padre,id_estudiante) values (2,14);
+insert into lista_familia (id_padre,id_estudiante) values (3,15);
+insert into lista_familia (id_padre,id_estudiante) values (3,16);
+insert into lista_familia (id_padre,id_estudiante) values (3,17);
+insert into lista_familia (id_padre,id_estudiante) values (3,18);
+insert into lista_familia (id_padre,id_estudiante) values (3,19);
+insert into lista_familia (id_padre,id_estudiante) values (3,20);
+insert into lista_familia (id_padre,id_estudiante) values (4,21);
+insert into lista_familia (id_padre,id_estudiante) values (4,22);
+insert into lista_familia (id_padre,id_estudiante) values (4,23);
+insert into lista_familia (id_padre,id_estudiante) values (4,24);
+insert into lista_familia (id_padre,id_estudiante) values (4,25);
+insert into lista_familia (id_padre,id_estudiante) values (4,26);
