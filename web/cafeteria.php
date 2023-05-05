@@ -44,7 +44,7 @@ include("include/TablasDinamicas.php");
             
             <input type="submit" name="Añadir_Estudiante" value="Añadir Estudiante" style="margin-top: 10px; background-color: #BBBBBB; border-radius: 12px;" formaction="creacionUsuarios/creacionEstudiante.php">
             <BR>
-            <input type="button" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;">
+            <input type="submit" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;" formaction="qr_e.php">
         	  </BR>
             <input type="button" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;">
            </form>
