@@ -50,7 +50,7 @@ $_SESSION["su"]=$su;
     </div>
   </div>
 
-  <form action="query/VerificacionLogIn" method="post">
+  <form action="#" method="post">
   	<div class="input-group mt-4";>
   		<input  class="form-control bg-light" placeholder="Nombre completo"  name="nombre" required style="text-align:" type="text"> 
   	</div>
@@ -64,10 +64,10 @@ $_SESSION["su"]=$su;
   	</div>
   	<br>
   	<div class="btn btn-warning w-100 mt-4 fw-bold shadow";>
-  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar" >
+  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar" formaction="../cafeteria.php">
   	</div>
     <div class="btn btn-warning w-100 mt-4 fw-bold shadow";>
-      <input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar y crear nuevo estudiante" >
+      <input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar y crear nuevo estudiante" formaction="creacionEstudiante.php">
     </div>
   </form>
 </body>

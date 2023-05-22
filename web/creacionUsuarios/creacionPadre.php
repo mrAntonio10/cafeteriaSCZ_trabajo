@@ -50,7 +50,7 @@ $_SESSION["su"]=$su;
     </div>
   </div>
 
-  <form action="query/VerificacionLogIn" method="post">
+  <form action="../cafeteria.php" method="post">
   	<div class="input-group mt-4";>
   		<input  class="form-control bg-light" placeholder="Nombre completo"  name="nombre" required style="text-align:" type="text"> 
   	</div>
