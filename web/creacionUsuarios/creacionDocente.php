@@ -41,7 +41,9 @@ $_SESSION["su"]=$su;
       <!--   Botones de interaccion cafeteria   -->
      <form action="#" method="get">
       <input type="hidden" name="hid" value="0">
-      <input type="submit" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;">
+      <input type="button" name="cerrarS" value="Cerrar Sesion" 
+      style="width: 360px; background-color: #BBBBBB; border-radius: 12px;" 
+      formaction="../cafeteria.php">
       <BR>
       <input type="button" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;">
   	  </BR>

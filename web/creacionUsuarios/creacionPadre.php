@@ -41,30 +41,33 @@ $_SESSION["su"]=$su;
       <!--   Botones de interaccion cafeteria   -->
      <form action="#" method="get">
       <input type="hidden" name="hid" value="0">
-      <input type="submit" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;">
+      <input type="submit" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;" formaction="../cafeteria.php">
       <BR>
       <input type="button" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;">
   	  </BR>
-      <input type="button" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;">
+      <input type="submit" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;" formaction="../cafeteria.php">
      </form>
     </div>
   </div>
 
   <form action="../cafeteria.php" method="post">
   	<div class="input-group mt-4";>
-  		<input  class="form-control bg-light" placeholder="Nombre completo"  name="nombre" required style="text-align:" type="text"> 
+  		<input  class="form-control bg-light" placeholder="Nombre"  name="Nombre_padre" required style="text-align:" type="text"> 
   	</div>
-  	<br>
-  	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Email"  name="email" required style="text-align:" type="text"> 
+    <div class="input-group mt-4";>
+      <input  class="form-control bg-light" placeholder="Apellidos"  name="Apellido_padre" required style="text-align:" type="text"> 
+    </div>
+  	<div class="input-group mt-4";>
+  		<input  class="form-control bg-light" placeholder="Email"  name="Email_padre" required style="text-align:" type="text"> 
   	</div>
-  	<br>
-  	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Telefono"  name="telefono" required style="text-align:" type="text"> 
+  	<div class="input-group mt-4";>
+  		<input  class="form-control bg-light" placeholder="Telefono"  name="Telefono_padre" required style="text-align:" type="text"> 
   	</div>
-  	<br>
+    <div class="input-group mt-4";>
+      <input  class="form-control bg-light" placeholder="Saldo"  name="Saldo_padre" required style="text-align:" type="float"> 
+    </div>
   	<div class="btn btn-warning w-100 mt-4 fw-bold shadow";>
-  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar y crear nuevo estudiante" >
+  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar y crear nuevo estudiante" formaction="../query/QueryCreacionPadre.php">
   	</div>
   </form>
 </body>

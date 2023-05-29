@@ -29,41 +29,36 @@ setcookie("PASS", $PASS);
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100"  style="background-color:#030428;">
 
-<?php
-#para ver el login
-  echo "<form action=\"query/VerificacionLogIn\" method=\"post\">";
+<form action="query/VerificacionLogIn" method="post">
  
-  echo "<div class=\"bg-white p-5 rounded-5 text-secondary shadow\" style= \"width: 25rem\"; >" ;
+  <div class="bg-white p-5 rounded-5 text-secondary shadow" style= "width: 25rem">
 
-  echo "<div class=\"d-flex justify-content-center\";>";
-  echo "<img src=\"include/logo.png\" alt=\"login-icon\" style= \"height: 15rem\"; >";
-  echo "</div>";
+  <div class="d-flex justify-content-center">
+  <img src="include/logo.png" alt="login-icon" style= "height: 15rem" >
+  </div>
   
-  echo "<div class=\"text-center fs-1 fw-bold\";>";
-  echo "Cafeteria SCIS";
-  echo "</div>";
+  <div class="text-center fs-1 fw-bold">
+  Cafeteria SCIS
+  </div>
 
-  echo "<div class=\"input-group mt-4\";>";
-  echo "<input  class=\"form-control bg-light\" placeholder=\"User\"  name=\"USER\" required style=\"text-align:\" type=\"text\">"; 
-  echo "</div>";
+  <div class="input-group mt-4">
+  <input  class="form-control bg-light" placeholder="User"  name="USER" required style="text-align:" type="text"> 
+  </div>
 
-  echo "<div class=\"input-group mt-1\";>";
-  echo "<input class=\"form-control bg-light\" type=\"password\" placeholder=\"Password\"  name=\"PASS\" required style=\"text-align:\" >";
-  echo "</div>";
+  <div class="input-group mt-1">
+  <input class="form-control bg-light" type="password" placeholder="Password"  name="PASS" required style="text-align:">
+  </div>
 
-  echo "<div>";
-  echo "<input type=\"hidden\"  class=\"btn d-grid gap-2 col-12 mx-auto\" name=\"FIJO\" value=\"1\" > ";
-  echo "</div>";
-
-
-  echo "<div class=\"btn btn-warning w-100 mt-4 fw-bold shadow\";>";
-  echo "<input type=\"submit\"  class=\"btn d-grid gap-2 col-12 mx-auto\" name=\"accion\" value=\"Log in\" > ";
-  echo "</div>";
-
-  echo "</div>";  
-
-  echo "</form>";
+  <div>
+  <input type="hidden"  class="btn d-grid gap-2 col-12 mx-auto" name="FIJO" value="1">
+  </div>
 
 
-?>
+  <div class="btn btn-warning w-100 mt-4 fw-bold shadow">
+  <input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Log in" >
+  </div>
+
+  </div>  
+
+  </form>
 </body>
