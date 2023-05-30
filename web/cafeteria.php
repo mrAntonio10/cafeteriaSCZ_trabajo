@@ -69,6 +69,8 @@ include("include/TablasDinamicas.php");
             });
       });
 </script>
+</div>
+
 
 </body>
 </html>
