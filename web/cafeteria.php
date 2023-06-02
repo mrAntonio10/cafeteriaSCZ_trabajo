@@ -67,6 +67,8 @@ include("menus/menuCafeteria");
             });
       });
 </script>
+</div>
+
 
 </body>
 </html>
