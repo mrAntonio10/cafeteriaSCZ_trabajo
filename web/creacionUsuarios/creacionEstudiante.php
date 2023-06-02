@@ -45,26 +45,30 @@ $_SESSION["su"]=$su;
       <BR>
       <input type="button" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;">
   	  </BR>
-      <input type="button" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;">
+      <input type="button" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;" formaction="../cafeteria.php">
      </form>
     </div>
   </div>
 
   <form action="../cafeteria.php" method="post">
   	<div class="input-group mt-4";>
-  		<input  class="form-control bg-light" placeholder="Nombre completo"  name="nombre" required style="text-align:" type="text"> 
+  		<input  class="form-control bg-light" placeholder="Nombre"  name="nombre_estudiante" required style="text-align:" type="text"> 
   	</div>
   	<br>
   	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Email"  name="email" required style="text-align:" type="text"> 
+  		<input  class="form-control bg-light" placeholder="Apellidos"  name="apellido_estudiante" required style="text-align:" type="text"> 
   	</div>
   	<br>
   	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Telefono"  name="telefono" required style="text-align:" type="text"> 
+  		<input  class="form-control bg-light" placeholder="Curso"  name="curso_estudiante" required style="text-align:" type="text"> 
   	</div>
   	<br>
+    <div class=\input-group mt-4\;>
+      <input  class="form-control bg-light" placeholder="Grado"  name="grado_estudiante" required style="text-align:" type="text"> 
+    </div>
+    <br>
   	<div class="btn btn-warning w-100 mt-4 fw-bold shadow";>
-  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Log in" >
+  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar estudiante" formaction="../query/QueryCreacionEstudiante.php">
   	</div>
   </form>
 </body>

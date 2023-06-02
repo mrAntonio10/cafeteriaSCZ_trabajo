@@ -6,6 +6,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		
 		$nombre=$_POST['Nombre_padre'];
 		$apellido=$_POST['Apellido_padre'];
@@ -25,6 +26,7 @@
 		foreach($res2 as $fila){
 			$id_padre=$fila['id_padre'];
 		}	
+		$_SESSION["id_padre"]=$id_padre;
 
 
 		include('mailconc.php');
