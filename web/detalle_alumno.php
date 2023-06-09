@@ -39,8 +39,17 @@ include("include/TablasDinamicas.php");
    //query que debe tar en otro .php
    $query=("SELECT e.id_estudiante as eid,e.Nombre as en, e.Apellido as eap, p.Nombre as pn, p.Apellido as pap, e.Curso as ec, e.Grado as eg, p.Saldo as ps FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_estudiante=$alumno AND lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;");
    $respuesta=query($query);
-   bandejaDetalle($respuesta);
+
+
+  
    ?>
+
+   <div class="container text-center">
+  <div class="row">
+    <div class="col-sm-8"> <?php bandejaDetalle($respuesta); ?></div>
+    <div class="col-sm-4">col-sm-4</div>
+  </div>
+</div>
 
 
 <!-- SCRIPT PARA PODER HACER LA PAGINACION -->

@@ -16,8 +16,6 @@
 
 
 
-
-
 <style type="text/css">
   .fondo_azul {
     background: #071655;
@@ -60,22 +58,15 @@
 </style>
 <div class="fondo_azul" style>
   <div style="width: 70%; display:  flex;">
-    <img src="include/logo.png" style="width: 50px; height: 50px">
+    <img src="menus/logo_scis" style="width: 50px; height: 50px">
     <h1>CAFETERIA SCIS</h1>
   </div>
   <div style="width: 30%; text-align: right; padding-right: 30px;">
     <div>
-      <?php
-      session_start();
-     $usuario= $_SESSION["funcionario"];
-     $localDateFormat = date('d/m/Y');
-
-
-      ?>
-      <b>Usuario:</b> <?php echo " $usuario";  ?>
+      Usuario: 
     </div>
     <div>
-      <b> Fecha: </b><?php echo $localDateFormat; ?>
+      Fecha: 
     </div>
   </div>
 </div>
@@ -84,10 +75,16 @@
     <input class="boton" type="submit" name="Buscador" value="Buscador" formaction="creacionUsuarios/creacionDocente.php">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Lista de Actualizacion Continua" value="Lista de Actualizacion Continua" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="Reportes" value="Reportes" formaction="creacionUsuarios/creacionDocente.php">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Escanear" value="Escanear" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre" formaction="creacionUsuarios/creacionDocente.php">
+  </div>
+  <div style="width: 20%;">
+    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente" formaction="creacionUsuarios/creacionDocente.php">
+  </div>
+  <div style="width: 20%;">
+    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" formaction="creacionUsuarios/creacionDocente.php">
   </div>
 </div>
 
