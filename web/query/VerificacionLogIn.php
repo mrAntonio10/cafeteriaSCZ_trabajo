@@ -28,12 +28,11 @@ $_SESSION["su"]=$su;
 
 //if
 if($su=='admin'){
-	header("Location: ../cafeteria.php");
+	header("Location: ../adminprofile.php");
 }
 
 else{
-echo $_SESSION['funcionario'];
-echo $_SESSION['su'];
+	header("Location: ../cafeteria.php");
 }
 
 ?>

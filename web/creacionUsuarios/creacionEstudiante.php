@@ -4,7 +4,7 @@ include("../include/conf.phpinc");
 include("../include/func.phpinc");
 include("../include/dbopen.php");	
 //PAGINA
-include("../include/head.php");
+include("../include/head2.php");
 include("../include/TablasDinamicas.php");
 ?>
 

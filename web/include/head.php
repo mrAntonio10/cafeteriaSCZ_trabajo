@@ -81,16 +81,15 @@
 </div>
 <div class="boton fondo_azul">
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Buscador" value="Buscador" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="Buscador" value="Buscador" onclick="window.location.href='cafeteria.php'" title="Buscador">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Lista de Actualizacion Continua" value="Lista de Actualizacion Continua" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="Lista de Actualizacion Continua" onclick="window.location.href='detalle_alumno.php'" value="Lista de Actualizacion Continua" title="Listado">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Escanear" value="Escanear" formaction="creacionUsuarios/creacionDocente.php">
+    <input type="submit" name="Escanear" value="Escanear" onclick="window.location.href='qr_e.php'" title="Escaner_QR">
   </div>
 </div>
-
 </head>
 <body>
 

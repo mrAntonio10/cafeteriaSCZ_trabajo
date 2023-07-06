@@ -63,28 +63,35 @@
   </div>
   <div style="width: 30%; text-align: right; padding-right: 30px;">
     <div>
-      Usuario: 
+      <?php
+      session_start();
+     $usuario= $_SESSION["funcionario"];
+     $localDateFormat = date('d/m/Y');
+
+
+      ?>
+      <b>Usuario:</b> <?php echo " $usuario";  ?>
     </div>
     <div>
-      Fecha: 
+      <b> Fecha: </b><?php echo $localDateFormat; ?>
     </div>
   </div>
 </div>
 <div class="boton fondo_azul">
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Buscador" value="Buscador" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="Buscador" value="Buscador" title="Buscador" onclick="window.location.href='../adminprofile.php'" >
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Reportes" value="Reportes" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="Reportes" value="Reportes" title="Reportes" >
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre"  title="Agregar_Padre" onclick="window.location.href='creacionUsuarios/creacionPadre.php'">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente"  title="Agregar_Docente" onclick="window.location.href='creacionUsuarios/creacionDocente.php'">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" formaction="creacionUsuarios/creacionDocente.php">
+    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" title="Agregar_Estudiante" onclick="window.location.href='creacionUsuarios/creacionEstudiante.php'">
   </div>
 </div>
 
