@@ -118,19 +118,19 @@
 </div>
 <div class="boton fondo_azul">
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Buscador" value="Buscador" title="Buscador" onclick="window.location.href='../adminprofile.php'" >
+    <input class="boton" type="submit" name="Buscador" value="Buscador" title="Buscador" onclick="window.location.href='adminprofile.php'" >
   </div>
   <div style="width: 20%;">
     <input class="boton" type="submit" name="Reportes" value="Reportes" title="Reportes" >
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre"  title="Agregar_Padre" onclick="window.location.href='creacionUsuarios/creacionPadre.php'">
+    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre"  title="Agregar_Padre" onclick="window.location.href='creacionPadre.php'">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente"  title="Agregar_Docente" onclick="window.location.href='creacionUsuarios/creacionDocente.php'">
+    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente"  title="Agregar_Docente" onclick="window.location.href='creacionDocente.php'">
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" title="Agregar_Estudiante" onclick="window.location.href='creacionUsuarios/creacionEstudiante.php'">
+    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" title="Agregar_Estudiante" onclick="window.location.href='creacionEstudiante.php'">
   </div>
 </div>
 
