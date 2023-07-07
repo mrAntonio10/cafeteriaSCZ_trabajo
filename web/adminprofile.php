@@ -29,7 +29,10 @@ include("include/TablasDinamicas.php");
      $('#workers_table').DataTable( {
           language: {
               url: "https://cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
-                }
+            },
+            lengthMenu: [ 10 ],
+        dom: 'Bfrtip',
+
             });
       });
 </script>

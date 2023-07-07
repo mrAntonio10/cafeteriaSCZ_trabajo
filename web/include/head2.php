@@ -17,6 +17,39 @@
 
 
 <style type="text/css">
+  .dataTables_filter {
+    text-align: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+  }
+  .dataTables_filter input{
+    width: 100% !important;
+  }
+  .dataTables_info {
+    display: none;
+  }
+  .dataTables_paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+  }
+  .dataTables_paginate .page-link {
+    color: #071655;
+
+  &:focus {
+    color: yellow !important;
+  }
+  &.active,
+  .active > & {
+    color: yellow !important;
+  }
+  }
+  .dataTables_paginate .active>.page-link, .page-link.active{
+    background-color: #071655 !important;
+    border-color: #071655 !important;
+  }
   .fondo_azul {
     background: #071655;
     color: #FFFFFF;
