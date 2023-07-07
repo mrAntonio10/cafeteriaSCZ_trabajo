@@ -24,6 +24,7 @@
   }
   .dataTables_filter input{
     width: 100% !important;
+    background-color: #d2d2d2 !important;
   }
   .dataTables_info {
     display: none;
@@ -72,6 +73,11 @@
     height: 50px;
     white-space: normal;
     font-size: 15px;
+    &.active,
+    .active > & {
+    color: #071655;
+    background: #ffffff;
+  }
   }
   .boton input:hover {
     background: #ffffff;
@@ -91,7 +97,7 @@
 </style>
 <div class="fondo_azul" style>
   <div style="width: 70%; display:  flex;">
-    <img src="menus/logo_scis" style="width: 50px; height: 50px">
+    <img src="include/LogoSCIS.png" style="width: 70px; height: 70px; margin-left: 20px; bottom: 10px; position: relative;">
     <h1>CAFETERIA SCIS</h1>
   </div>
   <div style="width: 30%; text-align: right; padding-right: 30px;">

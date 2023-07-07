@@ -93,8 +93,8 @@
 </style>
 <div class="fondo_azul" style>
   <div style="width: 70%; display:  flex;">
-    <img src="include/logo.png" style="width: 50px; height: 50px">
-    <h1>CAFETERIA SCIS</h1>
+    <img src="include/log.png" style="width: 50px; height: 50px">
+    <h1>CAFETERIA SCISmm</h1>
   </div>
   <div style="width: 30%; text-align: right; padding-right: 30px;">
     <div>
