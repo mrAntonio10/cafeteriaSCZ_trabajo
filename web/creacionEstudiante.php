@@ -24,34 +24,25 @@ $_SESSION["su"]=$su;
 //0 --> cerrar sesion
 //Cafeteria debe mostrar listado de estudiantes
 
+  //Bandeja Seleccionar un padre existente
+   $query=('SELECT p.id_padre as pid,p.Nombre as pn, p.Apellido as pap FROM padre as p;');
+   $respuesta=query($query);
+
 ?>
 <br>
 <h2><center>Nuevo Estudiante</center></h2>
 <br>
 <div style="width: 100%; display: flex;">
-  <div style="width: 100%; text-align: right;">
+  <div style="width: 60%; text-align: right;">
     <h3>Seleccionar Padre/ Madre:</h3>
-<?php
-  //Bandeja Seleccionar un padre existente
-   $query=('SELECT p.id_padre as pid,p.Nombre as pn, p.Apellido as pap FROM padre as p;');
-   $respuesta=query($query);
-   bandejaPadre($respuesta);
-?>
   </div>
-  <div style="width: 50%; margin-left: 30px;">
+  <div style="width: 40%; margin-left: 30px;">
     <a href="creacionPadre.php" class="button-link">Agregar Nuevo Padre</a>
   </div>
 </div>
-<br>
-
-
-
-  <form action="creacionEstudiante2.php" method="post" style="text-align: center;">
-  	
-  </form>
-
-
-
+<?php
+   bandejaPadre($respuesta);
+?>
 
 <!-- SCRIPT PARA PODER HACER LA PAGINACION -->
   <script type="text/javascript">
