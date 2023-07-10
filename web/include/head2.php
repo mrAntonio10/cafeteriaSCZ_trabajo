@@ -72,7 +72,6 @@
     width: 100%;
     height: 50px;
     white-space: normal;
-    font-size: 15px;
     &.active,
     .active > & {
     color: #071655;
@@ -82,6 +81,33 @@
   .boton input:hover {
     background: #ffffff;
     color: #071655;
+  }
+  .boton_secundario input{
+    background: #071655;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .texto input{
+    margin-bottom: 15px;
+    width: 60%;
+    height: 40px;
+  }
+  .button-link {
+    padding: 10px 20px;
+    background-color: #071655;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .button-link:hover {
+    color: #FFFFFF;
   }
 
   @media only screen and (max-width: 809px) {

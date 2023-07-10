@@ -79,6 +79,30 @@
     background: #ffffff;
     color: #071655;
   }
+  .boton_secundario input{
+    background: #071655;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .texto input{
+    margin-bottom: 15px;
+    width: 60%;
+    height: 40px;
+  }
+  .button-link {
+    padding: 10px 20px;
+    background-color: #071655;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
 
   @media only screen and (max-width: 809px) {
       .boton input{
@@ -93,8 +117,8 @@
 </style>
 <div class="fondo_azul" style>
   <div style="width: 70%; display:  flex;">
-    <img src="include/log.png" style="width: 50px; height: 50px">
-    <h1>CAFETERIA SCISmm</h1>
+    <img src="include/logo.png" style="width: 50px; height: 50px">
+    <h1>CAFETERIA SCIS</h1>
   </div>
   <div style="width: 30%; text-align: right; padding-right: 30px;">
     <div>

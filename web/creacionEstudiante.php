@@ -25,51 +25,23 @@ $_SESSION["su"]=$su;
 //Cafeteria debe mostrar listado de estudiantes
 
 ?>
-
-<div class="container">
-  <div class="row">
-    <div class="col" style="margin-top: 15px">
-      <?php
-      	//TOP
-		echo "<h1 align='left' style=\"margin-left: 30px\"> Cafeteria SCIS </h1>";
-		echo "<a align='left'style=\"margin-left: 45px; font-size: 24px;\"> <b> Usuario: </b> <u> $user </u> </a>  <br>";
-		echo "<a style=\"margin-left: 45px; font-size: 24px\"> <b> Fecha : </b> obtenerFecha </a>  <br><br>";
-		echo "<h2 style=\"margin-left: 20px\"> Nuevo Estudiante </h2>";
-      ?>
-    </div>
-    <div class="col" align="center" style="margin-top: 28px;">
-      <!--   Botones de interaccion cafeteria   -->
-     <form action="#" method="get">
-      <input type="hidden" name="hid" value="0">
-      <input type="submit" name="cerrarS" value="Cerrar Sesion" style="width: 360px; background-color: #BBBBBB; border-radius: 12px;">
-      <BR>
-      <input type="button" name="Scanner" value="Scanner" style="margin-top: 10px; width: 360; background-color: #BBBBBB; border-radius: 12px;">
-  	  </BR>
-      <input type="button" name="Lista_Actualizacion_Continua" value="Lista Actualizacion Continua" style="margin-top: 10px; width: 360px; background-color: #BBBBBB; border-radius: 12px;" formaction="../cafeteria.php">
-     </form>
-    </div>
+<br>
+<h2><center>Nuevo Estudiante</center></h2>
+<br>
+<div style="width: 100%; display: flex;">
+  <div style="width: 50%; text-align: right; margin-right: 30px;">
+    <h3>Seleccionar Padre/ Madre:</h3>
   </div>
+  <div style="width: 50%; margin-left: 30px;">
+    <a href="creacionPadre.php" class="button-link">Agregar Nuevo Padre</a>
+  </div>
+</div>
+<br>
 
-  <form action="../cafeteria.php" method="post">
-  	<div class="input-group mt-4";>
-  		<input  class="form-control bg-light" placeholder="Nombre"  name="nombre_estudiante" required style="text-align:" type="text"> 
-  	</div>
-  	<br>
-  	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Apellidos"  name="apellido_estudiante" required style="text-align:" type="text"> 
-  	</div>
-  	<br>
-  	<div class=\input-group mt-4\;>
-  		<input  class="form-control bg-light" placeholder="Curso"  name="curso_estudiante" required style="text-align:" type="text"> 
-  	</div>
-  	<br>
-    <div class=\input-group mt-4\;>
-      <input  class="form-control bg-light" placeholder="Grado"  name="grado_estudiante" required style="text-align:" type="text"> 
-    </div>
-    <br>
-  	<div class="btn btn-warning w-100 mt-4 fw-bold shadow";>
-  		<input type="submit"  class="btn d-grid gap-2 col-12 mx-auto" name="accion" value="Agregar estudiante" formaction="../query/QueryCreacionEstudiante.php">
-  	</div>
+
+
+  <form action="creacionEstudiante2.php" method="post" style="text-align: center;">
+  	
   </form>
 </body>
 </html>
