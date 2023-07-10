@@ -31,7 +31,7 @@
 
 		include('mailconc.php');
 		include("dbclose.php");
-		header("Location: ../creacionUsuarios/creacionEstudiante.php");
+		header("Location: ../creacionEstudiante.php");
 	?>
 </body>
 </html>

@@ -31,25 +31,25 @@ $_SESSION["su"]=$su;
 
   <form action="#" method="post" style="text-align: center;">
   	<div class="texto">
-      <input placeholder="Nombre"  name="Nombre_padre" required type="text">
+      <input placeholder="Nombre"  name="Nombre" required type="text">
     </div>
     <div class="texto">
-      <input placeholder="Apellidos"  name="Apellido_padre" required type="text">
+      <input placeholder="Apellidos"  name="Apellido" required type="text">
     </div>
     <div class="texto">
-      <input placeholder="Email"  name="Email_padre" required  type="text">
+      <input placeholder="Email"  name="Email" required  type="text">
     </div>
     <div class="texto">
-      <input placeholder="Telefono"  name="Telefono_padre" required type="text">
+      <input placeholder="Telefono"  name="Telefono" required type="text">
     </div>
     <div class="texto">
-      <input placeholder="Saldo"  name="Saldo_padre" required type="float">
+      <input placeholder="Saldo"  name="Saldo" required type="float">
     </div>
     <br>
     <div class="boton_secundario">
-      <input type="submit" name="accion" value="Agregar" formaction="cafeteria.php"
+      <input type="submit" name="accion" value="Agregar" formaction="query/QueryCreacionDocente.php"
       style="width: 260px !important; height: 60px !important;">
-      <input type="submit" name="accion" value="Agregar y crear nuevo estudiante" formaction="creacionEstudiante.php"
+      <input type="submit" name="accion" value="Agregar y crear nuevo estudiante" formaction="query/QueryCreacionDocenteConHijo.php"
       style="width: 260px !important; height: 60px !important;">
     </div>
     

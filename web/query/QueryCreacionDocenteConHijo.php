@@ -38,13 +38,14 @@
 
 		$sql5="INSERT INTO LISTA_FAMILIA (id_padre, id_estudiante) VALUES ($id_padre,$id_estudiante);";
 		$res5 = query($sql5);
+		$_SESSION["id_padre"]=$id_padre;
 
 
 
 
 		include('mailconc.php');
 		include("dbclose.php");
-		header("Location: ../cafeteria.php");
+		header("Location: ../creacionEstudiante2.php");
 	?>
 </body>
 </html>
