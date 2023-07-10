@@ -43,7 +43,6 @@ function bandejaEntrada($respuesta){
       echo "<input name=\"id_o\" type=\"hidden\" value=\"$id_origen\">";
       echo "<input name=\"point\" type=\"hidden\" value=\"10\">"; 
       echo "<td style=\"border-right: 1px solid #FDFEFE\">";
-     // echo "<input type=\"hidden\" value=\"{$fila['eid']}\">"; #071655
       echo "<input type=\"submit\" style=\"background: #071655; width: 100px; color: white\" value=\"Detalle\" formaction=\"detalle_alumno.php?usuario={$fila['eid']}\">";
       echo "</td>";
       echo "</form>";
@@ -67,13 +66,13 @@ function bandejaDetalle($respuesta){
               <tr>
     <?php
                
-                echo "<th style=\"border-right: 1px solid #FDFEFE\"> # </th>";
+               
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Nombre Estudiante </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Nombre Padre </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Curso </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Grado </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Saldo </th>";
-                echo "<th style=\"border-right: 1px solid #FDFEFE\">  Ver Detalles </th>";
+             
                
     ?>
               </tr>
@@ -85,7 +84,6 @@ function bandejaDetalle($respuesta){
 
       // code...
       echo "<tr style=\"text-align: center; \">";
-      echo "<td style=\"border-right: 1px solid #FDFEFE\">{$fila['eid']} </td>";
       echo "<td style=\"border-right: 1px solid #FDFEFE;\"> ";
       echo "{$fila['en']}  {$fila['eap']}
         </td>";
@@ -95,16 +93,44 @@ function bandejaDetalle($respuesta){
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['ec']} </td>";
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['eg']} </td>";
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['ps']} </td>";
-      
+      echo "</tr>";
+    }
+    ?>
+             
+            </tbody>
+          </table>
+<?php
+}
+?>
+
+<?php
+function bandejaPadre($respuesta){
+?>
+<table id="workers_table" class="table table-dark" style="width:100%;">
+<thead>
+              <tr>
+    <?php
+               
+               
+                echo "<th style=\"border-right: 1px solid #FDFEFE\"> Nombre </th>";
+                echo "<th style=\"border-right: 1px solid #FDFEFE\"> Apellido </th>";
+                echo "<th style=\"border-right: 1px solid #FDFEFE\"> * </th>";
+               
+    ?>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+             
+    foreach ($respuesta as $fila) {
+
+      // code...
+      echo "<tr style=\"text-align: center; \">";
+      echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['pn']} </td>";
+      echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['pap']} </td>";
+      echo "<td>";
       echo "<form action=\"#\" method=\"post\">";
-      $descripcion = "{$fila['descripcion_doc']}";
-      $id_origen = "{$fila['oop']}";
-      echo "<input name=\"desc\" type=\"hidden\" value=\"$descripcion\">";
-      echo "<input name=\"id_o\" type=\"hidden\" value=\"$id_origen\">";
-      echo "<input name=\"point\" type=\"hidden\" value=\"10\">"; 
-      echo "<td style=\"border-right: 1px solid #FDFEFE\">";
-     // echo "<input type=\"hidden\" value=\"{$fila['eid']}\">";
-      echo "<input type=\"submit\" value=\"+\" formaction=\"detalle_alumno.php?usuario={$fila['eid']}\">";
+      echo "<input type=\"submit\" style=\"background: #071655; width: 100px; color: white\" value=\"Seleccionar\" formaction=\"creacionEstudiante2.php?padre={$fila['pid']}\">";
       echo "</td>";
       echo "</form>";
       echo "</tr>";
@@ -116,5 +142,8 @@ function bandejaDetalle($respuesta){
 <?php
 }
 ?>
+
+
+
 
             
