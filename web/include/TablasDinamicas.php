@@ -106,15 +106,15 @@ function bandejaDetalle($respuesta){
 <?php
 function bandejaPadre($respuesta){
 ?>
-<table id="workers_table" class="table table-dark" style="width:100%;">
+<table id="workers_table" class="table" style="width:100%;">
 <thead>
               <tr>
     <?php
                
-               
-                echo "<th style=\"border-right: 1px solid #FDFEFE\"> Nombre </th>";
-                echo "<th style=\"border-right: 1px solid #FDFEFE\"> Apellido </th>";
-                echo "<th style=\"border-right: 1px solid #FDFEFE\"> * </th>";
+              
+                echo "<th style=\"border-right: 1px solid #FDFEFE; text-align: center;\"> Nombre </th>";
+                echo "<th style=\"border-right: 1px solid #FDFEFE; text-align: center;\"> Apellido </th>";
+                echo "<th style=\"border-right: 1px solid #FDFEFE; text-align: center;\"> * </th>";
                
     ?>
               </tr>
