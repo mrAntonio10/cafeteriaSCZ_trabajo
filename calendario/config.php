@@ -1,6 +1,6 @@
 <?php
 $usuario  = "root";
-$password = "capitan";
+$password = "4708";
 $servidor = "localhost";
 $basededatos = "practicas";
 $con = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");

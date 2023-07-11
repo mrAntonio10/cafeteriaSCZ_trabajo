@@ -62,8 +62,73 @@ include("include/TablasDinamicas.php");
             });
       });
 </script>
-
       </div>
+
+
+
+
+
+
+
+<!-- contenido popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <?php
+          //obtenerAnhioGestion
+    $anioActual = date("Y");
+    //request
+    $idAlumno = $_REQUEST['cod']; 
+    //query
+    $sql = "SELECT e.Nombre as ne, e.Apellido as ae, p.id_padre as idP, p.Nombre as np, p.Apellido as ap FROM estudiante e, lista_familia lf, padre p WHERE e.id_estudiante=$alumno AND lf.id_estudiante=$alumno AND p.id_padre=lf.id_padre;";
+    $res = query($sql);
+    //obtener los parametros
+    foreach($res as $fila){
+      $nombreEstudiante=$fila['ne'];
+      $apellidoEstudiante=$fila['ae'];
+      $nombrePadre=$fila['np'];
+      $apellidoPadre=$fila['ap'];
+      $debitarPadre=$fila['idP'];
+    }
+
+    //EstructuraFormatoTarjeta
+  ?>    
+    <center>
+      <?php
+        //top
+        echo "<h1> CLASS OF $anioActual </h1>";
+        //estudiante
+        echo "<h2> $nombreEstudiante $apellidoEstudiante</h2>";
+        //padre
+        echo "<h3> Parent: <br>";
+        echo "$nombrePadre $apellidoPadre </h3>";
+
+      //gestorDelQr
+        require_once("libreria/phpqrcode/qrlib.php");
+          QRcode::png("http://192.168.0.25/CAFETERIA/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre","test.png");
+      ?>
+      <!-- para mostrar la imagen-->
+          <img src="test.png" width="150" height="150">
+    <br>
+    <button id="closePopup">Cerrar</button>
+  </center>
+  </div>
+</div>
+
+
+<!-- Script -->
+
+<script>
+$(document).ready(function() {
+  $("#openPopup").click(function() {
+    $("#popup").fadeIn();
+  });
+
+  $("#closePopup").click(function() {
+    $("#popup").fadeOut();
+  });
+});
+
+</script>
 
 
 

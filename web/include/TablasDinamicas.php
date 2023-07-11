@@ -96,7 +96,9 @@ function bandejaDetalle($respuesta){
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['ps']} </td>";
        echo "<td>";
       echo "<form action=\"#\" method=\"post\">";
-      echo "<input type=\"submit\" style=\"background: #071655; width: 100px; color: white\" value=\"Seleccionar\" formaction=\"imagenes/generarTarjetas.php?cod={$fila['eid']}\">";
+      ?>
+        <button id="openPopup" style="background: #071655; width: 100px; color: white">Mostrar</button>
+      <?php
       echo "</td>";
       echo "</form>";
       echo "</tr>";
@@ -148,8 +150,3 @@ function bandejaPadre($respuesta){
 <?php
 }
 ?>
-
-
-
-
-            

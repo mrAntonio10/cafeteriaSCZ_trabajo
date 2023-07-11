@@ -17,15 +17,10 @@
     <div class="form-group">
       <label for="fecha_inicio" class="col-sm-12 control-label">Fecha Inicio</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="fecha_inicio" id="fecha_inicio" placeholder="Fecha Inicio">
+        <input type="text" class="form-control" name="fecha_inicio" id="fecha_inicio" placeholder="Fecha Inicio" readonly>
       </div>
     </div>
-    <div class="form-group">
-      <label for="fecha_fin" class="col-sm-12 control-label">Fecha Final</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="fecha_fin" id="fecha_fin" placeholder="Fecha Final">
-      </div>
-    </div>
+
 
   <div class="col-md-12" id="grupoRadio">
   
