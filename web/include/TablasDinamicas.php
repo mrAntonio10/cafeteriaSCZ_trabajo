@@ -61,7 +61,7 @@ function bandejaEntrada($respuesta){
 <?php
 function bandejaDetalle($respuesta){
 ?>
-<table id="workers_table" class="table table-dark" style="width:100%; ">
+<table id="workers_table" class="table" style="width:100%; ">
 <thead>
               <tr>
     <?php
@@ -71,7 +71,6 @@ function bandejaDetalle($respuesta){
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Nombre Padre </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Curso </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> Grado </th>";
-                echo "<th style=\"border-right: 1px solid #FDFEFE\"> Saldo </th>";
                 echo "<th style=\"border-right: 1px solid #FDFEFE\"> QR </th>";
              
                
@@ -93,11 +92,10 @@ function bandejaDetalle($respuesta){
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['pn']} {$fila['pap']} </td>";
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['ec']} </td>";
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['eg']} </td>";
-      echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['ps']} </td>";
        echo "<td>";
       echo "<form action=\"#\" method=\"post\">";
       ?>
-        <button id="openPopup" style="background: #071655; width: 100px; color: white">Mostrar</button>
+        <button id="openPopup" style="background: #071655; width: 100px; color: white">Ver QR</button>
       <?php
       echo "</td>";
       echo "</form>";
