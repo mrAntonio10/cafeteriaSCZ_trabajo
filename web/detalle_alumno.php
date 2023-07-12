@@ -4,7 +4,7 @@ include("include/conf.phpinc");
 include("include/func.phpinc");
 include("include/dbopen.php");	
 //PAGINA
-include("include/head.php");
+include("include/head2.php");
 include("include/TablasDinamicas.php");
 ?>
 
@@ -14,6 +14,9 @@ include("include/TablasDinamicas.php");
 	$user = $_SESSION['funcionario'];
 	$tipo = $_SESSION['su'];
   $alumno = $_REQUEST['usuario'];
+  //idAdmin
+  $id= $_SESSION['id'];
+
 
 //variables del FORMS
 ?>
@@ -104,7 +107,7 @@ include("include/TablasDinamicas.php");
 
       //gestorDelQr
         require_once("libreria/phpqrcode/qrlib.php");
-          QRcode::png("http://192.168.0.25/CAFETERIA/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre","test.png");
+          QRcode::png("http://192.168.0.18/CAFETERIA/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre-$id","test.png");
       ?>
       <!-- para mostrar la imagen-->
           <img src="test.png" width="150" height="150">

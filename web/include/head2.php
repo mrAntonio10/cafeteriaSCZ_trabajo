@@ -17,6 +17,24 @@
 
 
 <style type="text/css">
+  #popup {
+    left:0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+  }
+  .popup-content {
+    margin: 0px auto;
+    margin-top: 100px;
+    padding: 10px;
+    position: relative;
+    width: 500px;
+    min-width: 250px;
+    background: white;
+    border: 2px solid black;
+    height: 600px;
+  }
   .dataTables_filter {
     text-align: center !important;
     padding-top: 10px !important;
@@ -130,6 +148,7 @@
     <div>
       <?php
       session_start();
+      $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
      $localDateFormat = date('d/m/Y');
 
