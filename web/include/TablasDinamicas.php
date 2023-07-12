@@ -136,7 +136,7 @@ function bandejaPadre($respuesta){
       echo "<td style=\"border-right: 1px solid #FDFEFE\"> {$fila['pap']} </td>";
       echo "<td>";
       echo "<form action=\"#\" method=\"post\">";
-      echo "<input type=\"submit\" style=\"background: #071655; width: 100px; color: white\" value=\"Seleccionar\" formaction=\"creacionEstudiante2.php?padre={$fila['pid']}\">";
+      echo "<input type=\"submit\" style=\"background: #071655; width: 100px; color: white\" value=\"Seleccionar\" formaction=\"creacionEstudiante2.php?padre={$fila['pid']}-{$fila['pn']}-{$fila['pap']}\">";
       echo "</td>";
       echo "</form>";
       echo "</tr>";

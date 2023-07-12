@@ -20,6 +20,14 @@ $_SESSION["su"]=$su;
 	$user = $_SESSION['funcionario'];
 	$tipo = $_SESSION['su'];
 
+
+  $_SESSION["id"]=$id;
+  $padre = $_REQUEST['padre'];
+  $var=explode("-",$padre);
+  $id_padre=$var[0];
+  $nombre_padre = "$var[1] $var[2]";
+  $_SESSION["id_padre"]=$id_padre;
+
 //variables del FORMS
 //0 --> cerrar sesion
 //Cafeteria debe mostrar listado de estudiantes
@@ -29,7 +37,7 @@ $_SESSION["su"]=$su;
 <h2><center>Nuevo Estudiante</center></h2>
 <br>
 <?php
-echo("<h3><center>Padre/ Madre:</center></h3>
+echo("<h3><center>Padre/ Madre: $nombre_padre</center></h3>
 <br>");
 ?>
 

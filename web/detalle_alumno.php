@@ -16,12 +16,13 @@ include("include/TablasDinamicas.php");
   $alumno = $_REQUEST['usuario'];
 
   //query que debe tar en otro .php
-   $query=("SELECT e.id_estudiante as eid,e.Nombre as en, e.Apellido as eap, p.Nombre as pn, p.Apellido as pap, e.Curso as ec, e.Grado as eg, p.Saldo as ps FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_estudiante=$alumno AND lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;");
+   $query=("SELECT p.id_padre as pid, e.id_estudiante as eid,e.Nombre as en, e.Apellido as eap, p.Nombre as pn, p.Apellido as pap, e.Curso as ec, e.Grado as eg, p.Saldo as ps FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_estudiante=$alumno AND lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;");
    $respuesta=query($query);
 
    foreach ($respuesta as $fila) {
     $padre = "{$fila['pn']} {$fila['pap']}";
     $saldo = "{$fila['ps']}";
+    $id_padre = "{$fila['pid']}";
 
    }
 
@@ -34,16 +35,25 @@ include("include/TablasDinamicas.php");
             <?php
             	//TOP
       		echo "<a align='left'style=\"margin-left: 45px; font-size: 24px;\"> <b> Padre/ Madre: </b> $padre </a>  <br>";
-      		echo "<a style=\"margin-left: 45px; font-size: 24px\"> <b> Saldo: </b> $saldo </a>  <br><br><br><br>";
+          ?>
+          <div style= "width: 100%">
+            <?php
+      		    echo "<a style=\"margin-left: 45px; font-size: 24px\"> <b> Saldo: </b> $saldo Bs   &emsp;&emsp;</a>";
             ?>
+            <a href="creacionPadre.php" class="button-link">Agregar Saldo</a>
+          </div>
+          <br><br><br><br>
 
           </div>
         </div>
   <!-- Bandeja Lista Estudiantes Continua -->
 
    <div class="container text-center">
-  <div class="row">
+  <div class="row" style="margin-bottom: 4em;">
     <div class="col-sm-8"> <?php bandejaDetalle($respuesta); ?></div>
+  </div>
+  <div class="row">
+    <a href="creacionEstudiante.php" class="button-link">Agregar Estudiante</a>
   </div>
 </div>
 
