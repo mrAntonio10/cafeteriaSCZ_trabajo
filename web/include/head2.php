@@ -148,6 +148,7 @@
     <div>
       <?php
       session_start();
+      $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
      $localDateFormat = date('d/m/Y');
 

@@ -14,6 +14,9 @@ include("include/TablasDinamicas.php");
 	$user = $_SESSION['funcionario'];
 	$tipo = $_SESSION['su'];
   $alumno = $_REQUEST['usuario'];
+  //idAdmin
+  $id= $_SESSION['id'];
+
 
   //query que debe tar en otro .php
    $query=("SELECT p.id_padre as pid, e.id_estudiante as eid,e.Nombre as en, e.Apellido as eap, p.Nombre as pn, p.Apellido as pap, e.Curso as ec, e.Grado as eg, p.Saldo as ps FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_estudiante=$alumno AND lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;");
@@ -112,7 +115,7 @@ include("include/TablasDinamicas.php");
 
       //gestorDelQr
         require_once("libreria/phpqrcode/qrlib.php");
-          QRcode::png("http://192.168.0.25/CAFETERIA/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre","test.png");
+          QRcode::png("http://192.168.0.18/CAFETERIA/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre-$id","test.png");
       ?>
       <!-- para mostrar la imagen-->
           <img src="test.png" width="150" height="150">

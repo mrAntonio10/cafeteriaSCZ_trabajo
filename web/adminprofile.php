@@ -20,6 +20,7 @@ include("include/TablasDinamicas.php");
 	 $query=('SELECT e.id_estudiante as eid,e.Nombre as en, e.Apellido as eap, p.Nombre as pn, p.Apellido as pap, e.Curso as ec, e.Grado as eg, p.Saldo as ps FROM lista_familia as lf, padre as p, estudiante as e WHERE lf.id_padre=p.id_padre and lf.id_estudiante=e.id_estudiante;');
 	 $respuesta=query($query);
 	 bandejaEntrada($respuesta);
+
 	 ?>
 
 
@@ -36,6 +37,7 @@ include("include/TablasDinamicas.php");
             });
       });
 </script>
+
 
 
 </body>
