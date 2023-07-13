@@ -26,6 +26,16 @@ setcookie("PASS", $PASS);
   <title>
     .: Cafeteria SCIS :.
   </title>
+  <script>
+  // Verificar si existe un parámetro en la URL llamado 'alert'
+  const urlParams = new URLSearchParams(window.location.search);
+  const alertMessage = urlParams.get('alert');
+
+  // Mostrar una alerta si se proporcionó un mensaje en el parámetro 'alert'
+  if (alertMessage) {
+    alert(alertMessage);
+  }
+</script>
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100"  style="background-color:#030428;">
 

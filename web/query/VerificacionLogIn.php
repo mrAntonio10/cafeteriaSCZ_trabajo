@@ -19,20 +19,24 @@ foreach($res as $fila){
 	$id=$fila['id_admin'];
     $fun=$fila['Usuario'];
 	$su=$fila['Tipo'];
-	$contador=1;
 }
 
 $_SESSION["id"]=$id;
 $_SESSION["funcionario"]=$fun;
-$_SESSION["su"]=$su;
+$_SESSION["su"]= $su;
 
 //if
 if($su=='admin'){
 	header("Location: ../adminprofile.php");
 }
-
-else{
+else if($su=='cafeteria'){
 	header("Location: ../cafeteria.php");
+}
+else{
+	unset($_SESSION["id"]);
+	unset($_SESSION["funcionario"]);
+	unset($_SESSION["su"]);
+	header("Location: ../Index.php?alert=El usuario y contrasena no coinciden");
 }
 
 ?>
