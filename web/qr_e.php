@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<?php
+//DATOS EXTRAS
+include("include/conf.phpinc");
+include("include/func.phpinc");
+include("include/dbopen.php");	
+//PAGINA
+include("include/head.php");
+include("include/TablasDinamicas.php");
+?>
 <div class="containder-fluid">
 
 
 	<div class="row justify-content-center align-items-center vh-100">
-		<h1 style="text-align: center;">Como Escanear QR usando Instascan de HTML5</h1>
 		<div class="col-lg-9">
 			<video id="previsualizacion" class="p-1 border" style= "width:100%"></video>
 		</div>

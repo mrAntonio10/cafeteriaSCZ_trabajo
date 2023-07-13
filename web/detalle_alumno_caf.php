@@ -4,15 +4,15 @@ include("include/conf.phpinc");
 include("include/func.phpinc");
 include("include/dbopen.php");	
 //PAGINA
-include("include/head2.php");
+include("include/head.php");
 include("include/TablasDinamicas.php");
 ?>
 
 <?php
 //variables para iniciar sesion
-	session_start();
-	$user = $_SESSION['funcionario'];
-	$tipo = $_SESSION['su'];
+  session_start();
+  $user = $_SESSION['funcionario'];
+  $tipo = $_SESSION['su'];
   $datos_alumno = $_REQUEST['usuario'];
   $var=explode("-",$datos_alumno);
   $idAlumno = $var[0];
@@ -46,7 +46,6 @@ include("include/TablasDinamicas.php");
           <div style= "width: 100%">
             <?php
       		    echo "<a style=\"margin-left: 45px; font-size: 24px\"> <b> Saldo: </b> $saldo Bs   &emsp;&emsp;</a>";
-              echo "<a href=\"agregarSaldo.php?id_padre= $id_padre\" class=\"button-link\">Agregar Saldo</a>";
             ?>
           </div>
           <br><br><br><br>
@@ -57,10 +56,7 @@ include("include/TablasDinamicas.php");
 
    <div class="container text-center">
   <div class="row" style="margin-bottom: 4em;">
-    <div class="col-sm-8"> <?php bandejaDetalle($respuesta); ?></div>
-  </div>
-  <div class="row">
-    <a href="agregarEstudiante" class="button-link">Agregar Estudiante</a>
+    <div class="col-sm-8"> <?php bandejaDetalleCaf($respuesta); ?></div>
   </div>
 </div>
 
@@ -80,64 +76,6 @@ include("include/TablasDinamicas.php");
       </div>
 
 
-
-
-
-
-
-<!-- contenido popup -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <?php
-          //obtenerAnhioGestion
-    $anioActual = date("Y");
-    //request
-    $idAlumno = $_REQUEST['cod']; 
-    //query
-    $sql = "SELECT e.Nombre as ne, e.Apellido as ae, p.id_padre as idP, p.Nombre as np, p.Apellido as ap FROM estudiante e, lista_familia lf, padre p WHERE e.id_estudiante=$alumno AND lf.id_estudiante=$alumno AND p.id_padre=lf.id_padre;";
-    $res = query($sql);
-    //obtener los parametros
-    foreach($res as $fila){
-      $nombreEstudiante=$fila['ne'];
-      $apellidoEstudiante=$fila['ae'];
-      $nombrePadre=$fila['np'];
-      $apellidoPadre=$fila['ap'];
-      $debitarPadre=$fila['idP'];
-    }
-
-    //EstructuraFormatoTarjeta
-  ?>    
-    <center>
-      <?php
-      //gestorDelQr
-        require_once("libreria/phpqrcode/qrlib.php");
-          QRcode::png("http://192.168.0.6/cafeteria/cafeteriaSCZ_trabajo/web/imagenes/comprobarQr.php?sent=$alumno-$debitarPadre-$id","test.png");
-          echo("<a></a>");
-      ?>
-      <!-- para mostrar la imagen-->
-
-          <img src="test.png" width="300" height="300">
-    <br>
-    <button id="closePopup" class="boton_secundario">Cerrar</button>
-  </center>
-  </div>
-</div>
-
-
-<!-- Script -->
-
-<script>
-$(document).ready(function() {
-  $("#openPopup").click(function() {
-    $("#popup").fadeIn();
-  });
-
-  $("#closePopup").click(function() {
-    $("#popup").fadeOut();
-  });
-});
-
-</script>
 
 
 

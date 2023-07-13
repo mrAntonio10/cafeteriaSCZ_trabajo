@@ -134,17 +134,17 @@
   }
 </style>
 <div class="fondo_azul" style>
-  <div style="width: 70%; display:  flex;">
-    <img src="include/logo.png" style="width: 50px; height: 50px">
+  <div style="width: 50%; display:  flex;">
+    <img src="include/LogoSCIS.png" style="width: 70px; height: 70px; margin-left: 20px; bottom: 10px; position: relative;">
     <h1>CAFETERIA SCIS</h1>
   </div>
-  <div style="width: 30%; text-align: right; padding-right: 30px;">
+  <div style="width: 25%; text-align: right; padding-right: 30px;">
     <div>
       <?php
       session_start();
+      $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
      $localDateFormat = date('d/m/Y');
-
 
       ?>
       <b>Usuario:</b> <?php echo " $usuario";  ?>
@@ -152,6 +152,10 @@
     <div>
       <b> Fecha: </b><?php echo $localDateFormat; ?>
     </div>
+
+  </div>
+  <div style="width: 25%; text-align: right; padding-right: 30px;">
+    <input class="boton" type="submit" name="LogOut" value="Log Out" title="Log Out" onclick="window.location.href='LogOut.php'" >
   </div>
 </div>
 <div class="boton fondo_azul">

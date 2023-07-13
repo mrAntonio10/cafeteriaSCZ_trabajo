@@ -27,14 +27,16 @@
   .popup-content {
     margin: 0px auto;
     margin-top: 100px;
-    padding: 10px;
+    padding: 30px;
     position: relative;
-    width: 500px;
+    width: 40%;
     min-width: 250px;
     background: white;
-    border: 2px solid black;
-    height: 600px;
+    border: 1px solid black;
+    height: 400px;
+    border-radius:  20px;
   }
+
   .dataTables_filter {
     text-align: center !important;
     padding-top: 10px !important;
@@ -101,6 +103,14 @@
     color: #071655;
   }
   .boton_secundario input{
+    background: #071655;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .boton_secundario{
     background: #071655;
     font-size: 16px;
     color: #FFFFFF;
