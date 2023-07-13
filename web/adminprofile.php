@@ -9,7 +9,7 @@ include("include/TablasDinamicas.php");
 
  //variables para iniciar sesion
         session_start();
-        $user = $_SESSION['funcionario"'];
+        $user = $_SESSION['funcionario'];
         $tipo = $_SESSION['su'];
 //variables del FORMS
 ?>

@@ -163,7 +163,7 @@
      $localDateFormat = date('d/m/Y');
 
       ?>
-      <b>Usuario:</b> <?php echo " $usuario";  ?>
+      <b>Usuario:</b> <?php echo $usuario; ?>
     </div>
     <div>
       <b> Fecha: </b><?php echo $localDateFormat; ?>
