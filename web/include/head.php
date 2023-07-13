@@ -144,7 +144,11 @@
       session_start();
       $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
-     $localDateFormat = date('d/m/Y');
+         $date = new DateTime('now', new DateTimeZone('UTC'));
+$date->setTimezone(new DateTimeZone('America/La_Paz'));
+
+  $localDateFormat = $date->format('d/m/Y');
+
 
       ?>
       <b>Usuario:</b> <?php echo " $usuario";  ?>

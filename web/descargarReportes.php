@@ -1,8 +1,23 @@
+<?php
+//DATOS EXTRAS
+include("include/conf.phpinc");
+include("include/func.phpinc");
+include("include/TablasDinamicas.php");
+include("include/dbopen.php");
+
+ 
+
+$apartado = $_REQUEST['sent'];
+
+
+
+
+ob_start();
+?>
 <html>
-<head> 
-	<title>
-		 .: Cafeteria SCIS :. 
-	</title>
+    <title>
+     .: Cafeteria SCIS :. 
+  </title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
@@ -27,16 +42,14 @@
   .popup-content {
     margin: 0px auto;
     margin-top: 100px;
-    padding: 30px;
+    padding: 10px;
     position: relative;
-    width: 40%;
+    width: 500px;
     min-width: 250px;
     background: white;
-    border: 1px solid black;
-    height: 400px;
-    border-radius:  20px;
+    border: 2px solid black;
+    height: 600px;
   }
-
   .dataTables_filter {
     text-align: center !important;
     padding-top: 10px !important;
@@ -110,14 +123,6 @@
     margin-bottom: 10px;
     height: 40px;
   }
-  .boton_secundario{
-    background: #071655;
-    font-size: 16px;
-    color: #FFFFFF;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    height: 40px;
-  }
   .texto input{
     margin-bottom: 15px;
     width: 60%;
@@ -150,13 +155,13 @@
   }
 </style>
 <div class="fondo_azul" style>
-  <div style="width: 50%; display:  flex;">
+  <div style="width: 70%; display:  flex;">
     <img src="include/LogoSCIS.png" style="width: 70px; height: 70px; margin-left: 20px; bottom: 10px; position: relative;">
     <h1>CAFETERIA SCIS</h1>
   </div>
-  <div style="width: 25%; text-align: right; padding-right: 30px;">
+  <div style="width: 30%; text-align: right; padding-right: 30px;">
     <div>
-            <?php
+      <?php
       session_start();
       $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
@@ -166,36 +171,86 @@ $date->setTimezone(new DateTimeZone('America/La_Paz'));
   $localDateFormat = $date->format('d/m/Y');
 
 
+
       ?>
-      <b>Usuario:</b> <?php echo $usuario; ?>
+      <b>Usuario:</b> <?php echo " $usuario";  ?>
     </div>
     <div>
       <b> Fecha: </b><?php echo $localDateFormat; ?>
     </div>
-
-  </div>
-  <div style="width: 25%; text-align: right; padding-right: 30px;">
-    <input class="boton" type="submit" name="LogOut" value="Log Out" title="Log Out" onclick="window.location.href='LogOut.php'" >
-  </div>
-</div>
-<div class="boton fondo_azul">
-  <div style="width: 20%;">
-    <input class="boton" type="submit" name="Buscador" value="Buscador" title="Buscador" onclick="window.location.href='adminprofile.php'" >
-  </div>
-  <div style="width: 20%;">
-    <input class="boton" type="submit" name="Reportes" value="Reportes" title="Reportes" onclick="window.location.href='formatosReportes.php'">
-  </div>
-  <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre"  title="Agregar_Padre" onclick="window.location.href='creacionPadre.php'">
-  </div>
-  <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarDocente" value="Agregar Docente"  title="Agregar_Docente" onclick="window.location.href='creacionDocente.php'">
-  </div>
-  <div style="width: 20%;">
-    <input class="boton" type="submit" name="AgregarEstudiante" value="Agregar Estudiante" title="Agregar_Estudiante" onclick="window.location.href='creacionEstudiante.php'">
   </div>
 </div>
 
-</head>
+</div>
+
+<!-- Hasta aqui se tiene todo lo necesario para generar el reporte -->
 <body>
+
+
+<?php
+
+switch ($apartado) {
+  case 1:
+     $fechaActual = $date->format('Y-m-d');
+             echo "PDF Caja Diara $fechaActual";  
+      $sql = "SELECT t.id_estudiante as id, t.monto as monto, t.fecha as fecha, e.Nombre as en,e.Apellido as ea FROM transaccion t, estudiante e WHERE t.fecha='$fechaActual' AND t.id_estudiante=e.id_estudiante;";
+      $respuesta = query($sql);
+      bandejaReportes($respuesta);
+    break;
+
+  case 3:
+      //fecha actual
+         $fechaActual = $date->format('Y-m-d');
+         $date->add(new DateInterval('P7D'));
+         $fechaSemana = $date->format('Y-m-d');
+             echo "PDF Caja Semanal $fechaActual - $fechaSemana";  
+      $sql = "SELECT t.id_estudiante as id, t.monto as monto, t.fecha as fecha, e.Nombre as en,e.Apellido as ea FROM transaccion t, estudiante e WHERE t.fecha BETWEEN '$fechaActual' AND '$fechaSemana'AND t.id_estudiante=e.id_estudiante;";
+      $respuesta = query($sql);
+      bandejaReportes($respuesta);
+    break;
+
+  case 5:
+      //fecha actual
+         $fechaActual = $date->format('Y-m-d');
+             echo "PDF Deudores $fechaActual";  
+      $sql = "SELECT Nombre as n, Apellido as p, correo as c, Telefono as t, Saldo as s from padre WHERE Saldo < 0;";
+      $respuesta = query($sql);
+      bandejaDeudores($respuesta);
+//Termina el query y la bandeja - debemos cerrar el body y html para cargar toda la pagina como un PDF     
+    break;
+  
+  default:
+    // code...
+    break;
+}
+
+        
+?>
+
+</body>
+</html>
+
+<?php
+
+$html=ob_get_clean();
+require_once 'libreria/dompdf/autoload.inc.php';
+
+// reference the Dompdf namespace
+use Dompdf\Dompdf;
+
+// instantiate and use the dompdf class
+$dompdf = new Dompdf();
+$dompdf->loadHtml($html);
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+$dompdf->stream("$Nombres$Apellido_p".'_'."$id", array("Attachment"  => false));
+// PARA EN VIAR EL CORREO :D
+include_once("mailconc.php");
+?>
 
