@@ -150,7 +150,11 @@
       session_start();
       $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
-     $localDateFormat = date('d/m/Y');
+         $date = new DateTime('now', new DateTimeZone('UTC'));
+$date->setTimezone(new DateTimeZone('America/La_Paz'));
+
+  $localDateFormat = $date->format('d/m/Y');
+
 
 
       ?>
@@ -166,7 +170,7 @@
     <input class="boton" type="submit" name="Buscador" value="Buscador" title="Buscador" onclick="window.location.href='adminprofile.php'" >
   </div>
   <div style="width: 20%;">
-    <input class="boton" type="submit" name="Reportes" value="Reportes" title="Reportes" >
+    <input class="boton" type="submit" name="Reportes" value="Reportes" title="Reportes" onclick="window.location.href='formatosReportes.php'">
   </div>
   <div style="width: 20%;">
     <input class="boton" type="submit" name="AgregarPadre" value="Agregar Padre"  title="Agregar_Padre" onclick="window.location.href='creacionPadre.php'">

@@ -9,7 +9,11 @@
 	$idAdmin = $var[2];
 
 	//fecha actual
- $localDateFormat = date('Y-m-d');
+    $date = new DateTime('now', new DateTimeZone('UTC'));
+$date->setTimezone(new DateTimeZone('America/La_Paz'));
+
+  $localDateFormat = $date->format('d/m/Y');
+
 
 echo "Hola: $idAlumno  + $debitarPadre + $idAdmin";
 include("../include/dbopen.php");
