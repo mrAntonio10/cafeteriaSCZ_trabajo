@@ -7,10 +7,7 @@ include("include/dbopen.php");
 include("include/head.php");
 include("include/TablasDinamicas.php");
 
- //variables para iniciar sesion
-        session_start();
-        $user = $_SESSION['funcionario"'];
-        $tipo = $_SESSION['su'];
+//variables para iniciar sesion
 //variables del FORMS
 ?>
 

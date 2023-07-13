@@ -23,7 +23,7 @@ foreach($res as $fila){
 
 $_SESSION["id"]=$id;
 $_SESSION["funcionario"]=$fun;
-$_SESSION["su"]=$su;
+$_SESSION["su"]= $su;
 
 //if
 if($su=='admin'){

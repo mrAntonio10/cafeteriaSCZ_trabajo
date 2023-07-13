@@ -1,3 +1,9 @@
+<?php
+      session_start();
+      $id= $_SESSION['id'];
+      $usuario= $_SESSION["funcionario"];
+      $tipo = $_SESSION['su'];
+?>
 <html>
 <head> 
 	<title>
@@ -156,14 +162,12 @@
   </div>
   <div style="width: 25%; text-align: right; padding-right: 30px;">
     <div>
-            <?php
-      session_start();
-      $id= $_SESSION['id'];
-     $usuario= $_SESSION["funcionario"];
-         $date = new DateTime('now', new DateTimeZone('UTC'));
-$date->setTimezone(new DateTimeZone('America/La_Paz'));
+      <?php
 
-  $localDateFormat = $date->format('d/m/Y');
+      $date = new DateTime('now', new DateTimeZone('UTC'));
+      $date->setTimezone(new DateTimeZone('America/La_Paz'));
+
+      $localDateFormat = $date->format('d/m/Y');
 
 
       ?>
