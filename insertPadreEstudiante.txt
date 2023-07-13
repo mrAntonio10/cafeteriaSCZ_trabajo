@@ -1,5 +1,7 @@
 insert into admin (Nombre,Apellido,Usuario,contrasena,Tipo,correo) values ('Hector','Ichaso','hector','capitan','admin','hectorichasobarrientos@gmail.com');
 
+insert into admin (Nombre,Apellido,Usuario,contrasena,Tipo,correo) values ('Marco','Roca','marcoro','marcoro10','cafeteria','mr@gmail.com');
+
 insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Hector','Ichaso','hectorichasobarrientos@gmail.com','78029384',30,'hector','capitan',1,'padre');
 
 insert into padre (Nombre,Apellido,correo,Telefono,Saldo,Usuario,contrasena,Estado,Tipo) values ('Hamed','Pinto','marcorocadota@gmail.com','78645654',0,'hamed','123',0,'padre');
