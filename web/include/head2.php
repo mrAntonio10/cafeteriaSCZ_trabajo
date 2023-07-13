@@ -27,14 +27,16 @@
   .popup-content {
     margin: 0px auto;
     margin-top: 100px;
-    padding: 10px;
+    padding: 30px;
     position: relative;
-    width: 500px;
+    width: 40%;
     min-width: 250px;
     background: white;
-    border: 2px solid black;
-    height: 600px;
+    border: 1px solid black;
+    height: 400px;
+    border-radius:  20px;
   }
+
   .dataTables_filter {
     text-align: center !important;
     padding-top: 10px !important;
@@ -108,6 +110,14 @@
     margin-bottom: 10px;
     height: 40px;
   }
+  .boton_secundario{
+    background: #071655;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
   .texto input{
     margin-bottom: 15px;
     width: 60%;
@@ -140,11 +150,11 @@
   }
 </style>
 <div class="fondo_azul" style>
-  <div style="width: 70%; display:  flex;">
+  <div style="width: 50%; display:  flex;">
     <img src="include/LogoSCIS.png" style="width: 70px; height: 70px; margin-left: 20px; bottom: 10px; position: relative;">
     <h1>CAFETERIA SCIS</h1>
   </div>
-  <div style="width: 30%; text-align: right; padding-right: 30px;">
+  <div style="width: 25%; text-align: right; padding-right: 30px;">
     <div>
       <?php
       session_start();
@@ -156,13 +166,16 @@ $date->setTimezone(new DateTimeZone('America/La_Paz'));
   $localDateFormat = $date->format('d/m/Y');
 
 
-
       ?>
       <b>Usuario:</b> <?php echo " $usuario";  ?>
     </div>
     <div>
       <b> Fecha: </b><?php echo $localDateFormat; ?>
     </div>
+
+  </div>
+  <div style="width: 25%; text-align: right; padding-right: 30px;">
+    <input class="boton" type="submit" name="LogOut" value="Log Out" title="Log Out" onclick="window.location.href='LogOut.php'" >
   </div>
 </div>
 <div class="boton fondo_azul">
