@@ -156,7 +156,7 @@
   </div>
   <div style="width: 25%; text-align: right; padding-right: 30px;">
     <div>
-      <?php
+            <?php
       session_start();
       $id= $_SESSION['id'];
      $usuario= $_SESSION["funcionario"];
